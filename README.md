@@ -10,11 +10,13 @@ These instructions will get you a copy of the project up and running on your loc
 
 This handler works strictly with react native. Works with both the
 
-```create-react-app <app-name>
+```
+create-react-app <app-name>
 ```
 and the 
 
-```react-native init <app-name>
+```
+react-native init <app-name>
 ```
 of react native.
 
