@@ -10,12 +10,12 @@ These instructions will get you a copy of the project up and running on your loc
 
 This handler works strictly with react native. Works with both the
 
-```
+```javascript
 create-react-app <app-name>
 ```
 and the 
 
-```
+```javascript
 react-native init <app-name>
 ```
 of react native.
@@ -25,7 +25,7 @@ of react native.
 
 To Install the handler 
 
-```
+```javascript
 npm install asyncstoragehandler --save
 ```
 
@@ -33,12 +33,12 @@ npm install asyncstoragehandler --save
 
 1.Import asyncstoragehandler:
 
-```
+```javascript
 import Handler from 'asyncstoragehandler'
 ```
 2.Set one of the states in the constructor to be the handler:
 
-```
+```javascript
 constructor(){
   super();
   this.state = {
@@ -51,7 +51,7 @@ constructor(){
 
 A complete example on saving data.
 
-```
+```javascript
 import React, { Component } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import Handler from "asyncstoragehandler";
