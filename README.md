@@ -1,4 +1,4 @@
-# AsyncStroage Handler
+# AsyncStorage Handler
 
 An improved form of working with asyncstorage setitem,getitem etc.
 
@@ -47,16 +47,44 @@ constructor(){
 }
 ```
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
+### Complete Example
 
 Explain what these tests test and why
 
 ```
-Give an example
+import React, { Component } from "react";
+import { Text, TouchableOpacity, View } from "react-native";
+import Handler from "asyncstoragehandler";
+
+export default class HandlerTexter extends Component {
+  state = {
+    Handler: new Handler()
+  };
+
+  _setData = async() => {
+    let data = {
+      title : "handler test"
+    }
+    this.state.Handler.setItem('@KEY',data)
+    .then((value) => {
+      if(value){
+        alert("saved");
+      }else{
+         alert("not saved");
+      }
+    });
+}
+
+  render() {
+    return (
+      <View style={{ flex: 1 }}>
+        <TouchableOpacity onPress={this._setData}>
+          <Text>Save Data</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  }
+}
 ```
 
 ### And coding style tests
