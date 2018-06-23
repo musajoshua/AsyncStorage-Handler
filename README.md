@@ -49,7 +49,7 @@ constructor(){
 
 ### Complete Example
 
-Explain what these tests test and why
+A complete example on saving data.
 
 ```
 import React, { Component } from "react";
@@ -73,7 +73,7 @@ export default class HandlerTexter extends Component {
          alert("not saved");
       }
     });
-}
+  }
 
   render() {
     return (
@@ -86,24 +86,6 @@ export default class HandlerTexter extends Component {
   }
 }
 ```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 ## Contributing
 
@@ -123,6 +105,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
+* Hat tip to anyone whose code was used directly or indirectly.
 * Inspiration
 * etc
