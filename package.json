@@ -1,0 +1,24 @@
+{
+  "name": "asyncstoragehandler",
+  "version": "1.0.2",
+  "description": "Handler for React Native AsyncStorage.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/musatech/AsyncStorage-Handler.git"
+  },
+  "keywords": [
+    "AsyncStorage",
+    "React",
+    "React-Native"
+  ],
+  "author": "Musa Joshua",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/musatech/AsyncStorage-Handler/issues"
+  },
+  "homepage": "https://github.com/musatech/AsyncStorage-Handler#readme"
+}
