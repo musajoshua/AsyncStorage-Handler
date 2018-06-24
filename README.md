@@ -87,12 +87,19 @@ export default class HandlerTexter extends Component {
 }
 ```
 
-## Other Examples
+## Functions and Description
 
 | Command | Description |
 | --- | --- |
-| git status | List all new or modified files |
-| git diff | Show file differences that haven't been staged |
+| setItem(key: string, value: string) |  Persist a value to asyncStorage for a key. Returns a Promise object |
+| setItemArray(key: string, value: string) | Persist an array value to asyncStorage for a key. Returns a Promise object |
+| getItem(key: string) |  Gets an item (including array) for a key. Returns a Promise object |
+| editItem(key: string, value: string) |  Updates a value to asyncStorage for a key. Returns a Promise object |
+| editItemArray(key: string, index: integer, value: string) | Update an element from the array value for a key. Returns a Promise object |
+| deleteItem(key: string) | Removes an item for a key . Returns a Promise object. |
+| deleteItemArray(key: string, index: integer) |  Removes an element from the array value for a key. Returns a Promise object |
+| clearAllItem(key: string) | Erases all Item for all clients, libraries, etc. Returns a Promise object. |
+
 
 ## Authors
 
