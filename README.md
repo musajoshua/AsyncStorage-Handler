@@ -15,7 +15,7 @@ create-react-app <app-name>
 ```
 and the 
 
-```terminal
+```javascript
 react-native init <app-name>
 ```
 of react native.
@@ -97,7 +97,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Musa Joshua** - *Initial work* - [PurpleBooth](https://github.com/musatech)
+* **[Musa Joshua]**(https://github.com/musatech)
 
 ## License
 
