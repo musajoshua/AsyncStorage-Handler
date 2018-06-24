@@ -15,7 +15,7 @@ create-react-app <app-name>
 ```
 and the 
 
-```javascript
+```terminal
 react-native init <app-name>
 ```
 of react native.
