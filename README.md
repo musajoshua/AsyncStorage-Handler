@@ -1,6 +1,6 @@
 # AsyncStorage Handler
 
-An improved form of working with asyncstorage setitem,getitem etc.
+An improved form of working with [react-native](https://github.com/facebook/react-native) asyncstorage.
 
 ## Getting Started
 
@@ -89,13 +89,13 @@ export default class HandlerTexter extends Component {
 
 ## Functions and Description
 
-| Command | Description |
+| Functions | Description |
 | --- | --- |
 | setItem(key: string, value: string) |  Persist a value to asyncStorage for a key. Returns a Promise object |
 | setItemArray(key: string, value: string) | Persist an array value to asyncStorage for a key. Returns a Promise object |
 | getItem(key: string) |  Gets an item (including array) for a key. Returns a Promise object |
-| editItem(key: string, value: string) |  Updates a value to asyncStorage for a key. Returns a Promise object |
-| editItemArray(key: string, index: integer, value: string) | Update an element from the array value for a key. Returns a Promise object |
+| updateItem(key: string, value: string) |  Updates a value to asyncStorage for a key. Returns a Promise object |
+| updateItemArray(key: string, index: integer, value: string) | Update an element from the array value for a key. Returns a Promise object |
 | deleteItem(key: string) | Removes an item for a key . Returns a Promise object. |
 | deleteItemArray(key: string, index: integer) |  Removes an element from the array value for a key. Returns a Promise object |
 | clearAllItem(key: string) | Erases all Item for all clients, libraries, etc. Returns a Promise object. |
