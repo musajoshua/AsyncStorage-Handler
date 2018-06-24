@@ -48,7 +48,7 @@ class Handler {
                 for(i = 0; i < item.length; i++){
                     if (i === index) {
                         item[i] = data;
-                        this.removeItem(key);
+                        this.deleteItem(key);
                         return this.setItem(key,item);
                     }
                 }
@@ -86,7 +86,7 @@ class Handler {
                 for (i = 0; i < item.length; i++) {
                     if (i === index) {
                         item.splice(index, 1);
-                        this.removeItem(key);
+                        this.deleteItem(key);
                         return this.setItem(key, item);
                     }
                 }
