@@ -1,49 +1,51 @@
 import { AsyncStorage } from 'react-native';
 
 class Handler {
-    setItem = async(key,data) => {
-        try{
+    setItem = async (key, data) => {
+        try {
             AsyncStorage.setItem(key, JSON.stringify(data));
             return true;
-        }catch(err){
+        } catch(err) {
             return err;
         }
     }
 
-    setItemArray = async(key,data) => {
-        try{
+    setItemArray = async (key, data) => {
+        try {
             item = await AsyncStorage.getItem(key);
-            if(item !== null){
+            if (!item) {
                 item = JSON.parse(item);
                 item.push(data);
                 return this.setItem(key, item);
-            }else{
+            } else {
                 let temp = [];
                 temp.push(data);
                 return this.setItem(key,temp);
             }
-        }catch(err){
-            return(err)
+        } catch(err) {
+            return(err);
         }
     }
 
-    updateItem = async(key,data) => {
+    updateItem = async (key, data) => {
         try {
             this.removeItem(key);
             return this.setItem(key,data);
-        }catch(err){
+        } catch(err) {
             return err;
         }
     }
 
-    updateItemArray = async(key, index,data) => {
+    updateItemArray = async (key, index, data) => {
         try {
             let item = await AsyncStorage.getItem(key);
-            if (item !== null) {
+            
+            if (!item) {
                 item =  JSON.parse(item);
             } else {
                 return null;
             }
+            
             if (Array.isArray(item)) {
                 for(i = 0; i < item.length; i++){
                     if (i === index) {
@@ -61,27 +63,29 @@ class Handler {
         }
     }
 
-    getItem = async(key) => {
+    getItem = async (key) => {
         try {
             data =  await AsyncStorage.getItem(key);
-            if(data !== null){
+            if (!data) {
                 return JSON.parse(data);
-            }else{
+            } else {
                 return null;
             }
-        }catch (err) {
+        } catch (err) {
             return (err);
         }
     }
 
-    deleteItemArray = async(key, index) => {
+    deleteItemArray = async (key, index) => {
         try {
             let item = await AsyncStorage.getItem(key);
-            if (item !== null) {
+            
+            if (!item) {
                 item = JSON.parse(item);
             } else {
                 return null;
             }
+            
             if (Array.isArray(item)) {
                 for (i = 0; i < item.length; i++) {
                     if (i === index) {
@@ -99,16 +103,16 @@ class Handler {
         }
     }
 
-    deleteItem = async(key) => {
+    deleteItem = async (key) => {
         try {
             AsyncStorage.removeItem(key);
             return true;
-        }catch(err){
+        } catch(err) {
             return err;
         }
     }
 
-    clearAllItems = async() => {
+    clearAllItems = async () => {
         try {
             AsyncStorage.clear();
             return true;
@@ -120,4 +124,3 @@ class Handler {
 }
 
 export default Handler;
-
